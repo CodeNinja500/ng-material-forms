@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-title>Form exercises</mat-card-title>
+  <mat-card-content>
+    <mat-chip-list *ngIf="routes">
+      <mat-chip *ngFor="let route of routes" routerLink = {{route}}>
+        {{route}}
+      </mat-chip>
+    </mat-chip-list>
+  </mat-card-content>
+</mat-card>

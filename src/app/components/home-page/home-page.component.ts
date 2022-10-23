@@ -1,0 +1,17 @@
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+
+@Component({
+  selector: 'app-home-page',
+  styleUrls: ['./home-page.component.scss'],
+  templateUrl: './home-page.component.html',
+  encapsulation: ViewEncapsulation.Emulated,
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class HomePageComponent {
+  readonly routes: string[] = [
+    'new-product',
+    'create-employee',
+    'login',
+    'register'
+  ];
+}
