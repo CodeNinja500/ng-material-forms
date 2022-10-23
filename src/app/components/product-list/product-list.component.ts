@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Observable } from 'rxjs';
 import { ProductService } from '../../services/product.service';
 
 @Component({
@@ -17,6 +18,7 @@ export class ProductListComponent {
     image: new FormControl(),
     category: new FormControl()
   });
+  readonly categories$: Observable<string> = this._productService.getCategory();
 
   constructor(private _productService: ProductService) {
   }
